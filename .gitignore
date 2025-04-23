@@ -1,0 +1,7 @@
+# Byte-code / IDE cache
+__pycache__/
+*.py[cod]
+
+# Logs & artefacts
+logs/
+output.parquet
