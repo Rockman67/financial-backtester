@@ -1,7 +1,11 @@
-# Byte-code / IDE cache
-__pycache__/
-*.py[cod]
+# ───────── virtual environment ─────────
+.venv/
 
-# Logs & artefacts
-logs/
-output.parquet
+# ───────── runtime outputs (Stage 2) ─────────
+results/          # equity_* and grid_* CSV files
+demo/             # screenshots, demo videos, PDFs
+
+# screenshots / reports
+*.png
+*.mp4
+*.pdf
