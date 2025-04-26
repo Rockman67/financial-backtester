@@ -9,3 +9,4 @@ demo/             # screenshots, demo videos, PDFs
 *.png
 *.mp4
 *.pdf
+db/finance.db
