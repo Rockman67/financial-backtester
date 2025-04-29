@@ -3,10 +3,7 @@ name: Build & Push WebUI
 on:
   push:
     branches: [ stage3/webui ]
-    paths:
-      - "webui/**"
-      - "docker-compose.yml"
-      - ".github/workflows/webui.yml"
+
 
 jobs:
   build-push:
