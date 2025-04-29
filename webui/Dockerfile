@@ -1,15 +1,20 @@
+# ---------- base ----------
 FROM python:3.12-slim
 
-# 1. Создаём рабочую папку
+# ---------- workdir ----------
 WORKDIR /app
 
-# 2. Копируем requirements и устанавливаем пакеты
+# ---------- dependencies ----------
+# 1. копируем requirements.txt из корня репозитория
 COPY requirements.txt .
+
+# 2. устанавливаем Python-зависимости
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 3. Копируем только код web-приложения
+# ---------- application code ----------
+# 3. копируем всё содержимое подпапки webui (app.py, templates/, static/…)
 COPY webui/ /app
 
-# 4. Открываем порт и запускаем
+# ---------- runtime ----------
 EXPOSE 8000
 CMD ["python", "app.py"]
