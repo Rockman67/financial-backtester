@@ -1,0 +1,10 @@
+<!doctype html>
+<title>Backtest Results</title>
+<h1>📊 Available result files</h1>
+<ul>
+  {% for f in files %}
+    <li><a href="{{ url_for('static', filename='results/' ~ f) }}">{{ f }}</a></li>
+  {% else %}
+    <li><em>No result files yet</em></li>
+  {% endfor %}
+</ul>
